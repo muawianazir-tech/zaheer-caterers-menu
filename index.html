@@ -3,36 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TESTING FILE PATHS</title>
+    <title>Zaheer Caterers Menu Slider</title>
+
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('zaheer-logo.png'); 
+            background-repeat: repeat; 
+            background-size: 250px auto; 
+            background-attachment: fixed; 
+            background-color: #000000; 
+            
+            text-align: center;
+            padding: 20px;
+            color: white; 
+        }
+
+        h1 {
+            color: gold; 
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+    
+        .slider {
+            width: 100%;
+            max-width: 700px;
+            margin: auto;
+            position: relative;
+         
+            background-color: rgba(255, 255, 255, 0.9); 
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .slides {
+            display: none;
+            width: 100%;                  
+            height: auto;                 
+            border-radius: 10px;
+            object-fit: contain;          
+        }
+
+        .btn {
+            cursor: pointer;
+            padding: 10px 20px;
+            background: black;
+            color: white;
+            border: none;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            color: black;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>*** TESTING FILE PATHS - IF YOU SEE THIS, THE PAGE IS LOADING ***</h1>
-    <p>If you see the images below, the filenames are correct. If you see broken icons, the filenames on GitHub are still wrong.</p>
-    
-    <hr>
-    
-    <h2>1. Background Logo Test:</h2>
-    <img src="zaheer-logo.png" alt="Zaheer Logo" style="border: 5px solid gold; max-width: 300px; display: block; margin: 10px auto;">
+    <h1>Zaheer Caterers Menu</h1>
 
-    <hr>
-    
-    <h2>2. Menu Slides Test:</h2>
-    <p>Slide 1:</p>
-    <img src="cover-page.jpeg" alt="Cover Page" style="border: 2px solid red; max-width: 700px; display: block; margin: 10px auto;">
+    <div class="slider">
+        <img class="slides" src="cover-page.jpeg" alt="Image 1">
+        <img class="slides" src="menu2.jpeg" alt="Image 2">
+        <img class="slides" src="menu.jpeg" alt="Image 3">
+        <img class="slides" src="menu3.jpeg" alt="Image 4">
+    </div>
 
-    <p>Slide 2:</p>
-    <img src="menu2.jpeg" alt="Menu Page 2" style="border: 2px solid red; max-width: 700px; display: block; margin: 10px auto;">
+    <br>
 
-    <p>Slide 3:</p>
-    <img src="menu.jpeg" alt="Menu Page 3" style="border: 2px solid red; max-width: 700px; display: block; margin: 10px auto;">
+    <button class="btn" onclick="changeSlide(-1)">Previous</button>
+    <button class="btn" onclick="changeSlide(1)">Next</button>
 
-    <p>Slide 4:</p>
-    <img src="menu3.jpeg" alt="Menu Page 4" style="border: 2px solid red; max-width: 700px; display: block; margin: 10px auto;">
+    <script>
 
-    <hr>
-    
-    <p>If you see all images, we can go back to the original slider code.</p>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slides");
+
+            if (n > slides.length) slideIndex = 1;
+            if (n < 1) slideIndex = slides.length;
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            if (slides.length > 0) {
+                 slides[slideIndex - 1].style.display = "block";
+            }
+        }
+    </script>
 
 </body>
 </html>
