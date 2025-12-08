@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaheer Caterers - Menu</title>
+    <title>Zaheer Caterers - Premium Menu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -15,13 +15,7 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background: 
-                linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-                url('BACKGROUND.jpg');
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            background-attachment: fixed;
+            background: #0c0c0c;
             color: #f8f8f8;
             min-height: 100vh;
             padding: 20px;
@@ -33,7 +27,7 @@
         .menu-container {
             max-width: 1200px;
             width: 100%;
-            background: rgba(30, 20, 10, 0.95);
+            background: #1a1208;
             border-radius: 25px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
             overflow: hidden;
@@ -41,11 +35,12 @@
         }
 
         .menu-header {
-            background: linear-gradient(135deg, #8B0000 0%, #A0522D 100%);
+            background: #8B0000;
             padding: 50px 40px;
             text-align: center;
             position: relative;
             overflow: hidden;
+            border-bottom: 5px solid #D4AF37;
         }
 
         .menu-header::before {
@@ -88,11 +83,21 @@
 
         .menu-content {
             padding: 40px 30px;
-            background: rgba(20, 15, 10, 0.8);
+            background: #1a1208;
         }
 
         .menu-section {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
+            background: rgba(40, 30, 20, 0.9);
+            border-radius: 20px;
+            padding: 40px;
+            border: 2px solid #5D4037;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+        }
+
+        .menu-section:hover {
+            border-color: #D4AF37;
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.3);
         }
 
         .section-title {
@@ -113,82 +118,80 @@
             left: 50%;
             transform: translateX(-50%);
             color: #FFD700;
-            background: rgba(20, 15, 10, 0.8);
+            background: rgba(40, 30, 20, 0.9);
             padding: 0 20px;
             font-size: 1.5rem;
         }
 
         .menu-items {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
         }
 
         .menu-item {
-            background: rgba(40, 30, 20, 0.9);
-            border-radius: 20px;
-            padding: 30px;
+            background: rgba(60, 45, 30, 0.8);
+            border-radius: 15px;
+            padding: 25px;
             transition: all 0.3s ease;
-            border: 2px solid #5D4037;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-            display: flex;
-            align-items: center;
+            border: 1px solid #8B4513;
             position: relative;
             overflow: hidden;
         }
 
         .menu-item:hover {
             transform: translateY(-5px);
+            background: rgba(80, 60, 40, 0.9);
             border-color: #D4AF37;
-            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
-        }
-
-        .item-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            color: #D4AF37;
-            margin-right: 25px;
-            min-width: 60px;
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .item-details {
-            flex: 1;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
         }
 
         .item-name {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: #FFD700;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             letter-spacing: 1px;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .item-name::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #D4AF37;
         }
 
         .item-description {
             color: #E8E8E8;
             line-height: 1.6;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-style: italic;
+            padding-left: 10px;
         }
 
-        .item-icon {
-            color: #D4AF37;
-            font-size: 1.8rem;
-            margin-left: 20px;
-            opacity: 0.8;
-        }
-
-        .spice-level {
-            margin-top: 10px;
+        .spice-indicator {
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .spice-text {
+            color: #D4AF37;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .spice-dots {
+            display: flex;
+            gap: 4px;
         }
 
         .spice-dot {
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
             border-radius: 50%;
             background: #5D4037;
         }
@@ -198,11 +201,10 @@
         }
 
         .menu-footer {
-            background: linear-gradient(135deg, #2c1810, #1a1208);
+            background: #2c1810;
             padding: 40px 30px;
             text-align: center;
             border-top: 3px solid #D4AF37;
-            margin-top: 30px;
         }
 
         .contact-info {
@@ -246,6 +248,34 @@
             font-size: 1.1rem;
         }
 
+        /* Category-specific colors */
+        .mutton-section .section-title {
+            color: #FF7F50;
+            border-bottom-color: #FF4500;
+        }
+
+        .mutton-section .item-name {
+            color: #FF7F50;
+        }
+
+        .chicken-section .section-title {
+            color: #FFD700;
+            border-bottom-color: #DAA520;
+        }
+
+        .chicken-section .item-name {
+            color: #FFD700;
+        }
+
+        .pulao-section .section-title {
+            color: #98FB98;
+            border-bottom-color: #32CD32;
+        }
+
+        .pulao-section .item-name {
+            color: #98FB98;
+        }
+
         @media (max-width: 768px) {
             .menu-title {
                 font-size: 2.8rem;
@@ -257,21 +287,15 @@
             
             .menu-items {
                 grid-template-columns: 1fr;
-                gap: 25px;
+                gap: 15px;
             }
             
-            .menu-item {
-                padding: 20px;
-            }
-            
-            .item-number {
-                font-size: 2.5rem;
-                margin-right: 15px;
-                min-width: 50px;
+            .menu-section {
+                padding: 30px 20px;
             }
             
             .item-name {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
             }
             
             .section-title {
@@ -297,20 +321,8 @@
                 letter-spacing: 2px;
             }
             
-            .menu-item {
-                padding: 15px;
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .item-number {
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
-            
-            .item-icon {
-                margin-left: 0;
-                margin-top: 10px;
+            .menu-section {
+                padding: 20px 15px;
             }
             
             .menu-footer {
@@ -329,200 +341,345 @@
         </div>
 
         <div class="menu-content">
+            <!-- STARTERS SECTION -->
             <div class="menu-section">
-                <h2 class="section-title">BIRYANI COLLECTION</h2>
-                
+                <h2 class="section-title">STARTER COLLECTION</h2>
                 <div class="menu-items">
-                    <!-- Item 1 -->
                     <div class="menu-item">
-                        <div class="item-number">01</div>
-                        <div class="item-details">
-                            <h3 class="item-name">CHICKEN BIRYANI</h3>
-                            <p class="item-description">Traditional aromatic basmati rice with succulent chicken pieces and secret blend of spices</p>
-                            <div class="spice-level">
+                        <h3 class="item-name">100 Exquisite Dishes</h3>
+                        <p class="item-description">An extensive collection of appetizers, kebabs, and starters from across India</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Variety:</span>
+                            <div class="spice-dots">
                                 <div class="spice-dot active"></div>
                                 <div class="spice-dot active"></div>
-                                <div class="spice-dot"></div>
-                            </div>
-                        </div>
-                        <div class="item-icon">
-                            <i class="fas fa-drumstick-bite"></i>
-                        </div>
-                    </div>
-
-                    <!-- Item 2 -->
-                    <div class="menu-item">
-                        <div class="item-number">02</div>
-                        <div class="item-details">
-                            <h3 class="item-name">CHICKEN DUAL BIRYANI</h3>
-                            <p class="item-description">A unique combination of two different biryani styles in one delicious serving</p>
-                            <div class="spice-level">
-                                <div class="spice-dot active"></div>
-                                <div class="spice-dot"></div>
-                                <div class="spice-dot"></div>
-                            </div>
-                        </div>
-                        <div class="item-icon">
-                            <i class="fas fa-layer-group"></i>
-                        </div>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="menu-item">
-                        <div class="item-number">03</div>
-                        <div class="item-details">
-                            <h3 class="item-name">CHICKEN TIKKA BIRYANI</h3>
-                            <p class="item-description">Tandoori tikka chicken pieces layered with fragrant saffron rice</p>
-                            <div class="spice-level">
                                 <div class="spice-dot active"></div>
                                 <div class="spice-dot active"></div>
                                 <div class="spice-dot active"></div>
                             </div>
-                        </div>
-                        <div class="item-icon">
-                            <i class="fas fa-fire"></i>
-                        </div>
-                    </div>
-
-                    <!-- Item 4 -->
-                    <div class="menu-item">
-                        <div class="item-number">04</div>
-                        <div class="item-details">
-                            <h3 class="item-name">CHICKEN MINT BIRYANI</h3>
-                            <p class="item-description">Refreshing mint-infused biryani with tender chicken pieces</p>
-                            <div class="spice-level">
-                                <div class="spice-dot active"></div>
-                                <div class="spice-dot"></div>
-                                <div class="spice-dot"></div>
-                            </div>
-                        </div>
-                        <div class="item-icon">
-                            <i class="fas fa-leaf"></i>
-                        </div>
-                    </div>
-
-                    <!-- Item 5 -->
-                    <div class="menu-item">
-                        <div class="item-number">05</div>
-                        <div class="item-details">
-                            <h3 class="item-name">CHICKEN AFGHANI BIRYANI</h3>
-                            <p class="item-description">Creamy, rich biryani with Afghan-inspired spices and nuts</p>
-                            <div class="spice-level">
-                                <div class="spice-dot active"></div>
-                                <div class="spice-dot active"></div>
-                                <div class="spice-dot"></div>
-                            </div>
-                        </div>
-                        <div class="item-icon">
-                            <i class="fas fa-mortar-pestle"></i>
-                        </div>
-                    </div>
-
-                    <!-- Item 6 -->
-                    <div class="menu-item">
-                        <div class="item-number">06</div>
-                        <div class="item-details">
-                            <h3 class="item-name">CHICKEN TANDOORI BIRYANI</h3>
-                            <p class="item-description">Smoky tandoori chicken with traditional biryani rice</p>
-                            <div class="spice-level">
-                                <div class="spice-dot active"></div>
-                                <div class="spice-dot active"></div>
-                                <div class="spice-dot active"></div>
-                            </div>
-                        </div>
-                        <div class="item-icon">
-                            <i class="fas fa-fire-alt"></i>
-                        </div>
-                    </div>
-
-                    <!-- Item 7 -->
-                    <div class="menu-item">
-                        <div class="item-number">07</div>
-                        <div class="item-details">
-                            <h3 class="item-name">CHICKEN GARLIC BIRYANI</h3>
-                            <p class="item-description">Garlic-infused biryani with aromatic herbs and tender chicken</p>
-                            <div class="spice-level">
-                                <div class="spice-dot active"></div>
-                                <div class="spice-dot active"></div>
-                                <div class="spice-dot"></div>
-                            </div>
-                        </div>
-                        <div class="item-icon">
-                            <i class="fas fa-garlic"></i>
-                        </div>
-                    </div>
-
-                    <!-- Item 8 -->
-                    <div class="menu-item">
-                        <div class="item-number">08</div>
-                        <div class="item-details">
-                            <h3 class="item-name">CHICKEN LUCKNOWI BIRYANI</h3>
-                            <p class="item-description">Awadhi style dum biryani with delicate spices and saffron</p>
-                            <div class="spice-level">
-                                <div class="spice-dot active"></div>
-                                <div class="spice-dot"></div>
-                                <div class="spice-dot"></div>
-                            </div>
-                        </div>
-                        <div class="item-icon">
-                            <i class="fas fa-crown"></i>
-                        </div>
-                    </div>
-
-                    <!-- Item 9 -->
-                    <div class="menu-item">
-                        <div class="item-number">09</div>
-                        <div class="item-details">
-                            <h3 class="item-name">CHICKEN HYDERABADI BIRYANI</h3>
-                            <p class="item-description">Spicy traditional Hyderabadi biryani with authentic masalas</p>
-                            <div class="spice-level">
-                                <div class="spice-dot active"></div>
-                                <div class="spice-dot active"></div>
-                                <div class="spice-dot active"></div>
-                            </div>
-                        </div>
-                        <div class="item-icon">
-                            <i class="fas fa-pepper-hot"></i>
-                        </div>
-                    </div>
-
-                    <!-- Item 10 -->
-                    <div class="menu-item">
-                        <div class="item-number">10</div>
-                        <div class="item-details">
-                            <h3 class="item-name">CHICKEN SPECIAL BIRYANI</h3>
-                            <p class="item-description">Chef's special biryani with a unique blend of premium spices</p>
-                            <div class="spice-level">
-                                <div class="spice-dot active"></div>
-                                <div class="spice-dot active"></div>
-                                <div class="spice-dot"></div>
-                            </div>
-                        </div>
-                        <div class="item-icon">
-                            <i class="fas fa-star"></i>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="menu-section">
-                <h2 class="section-title">SPECIALTY DISHES</h2>
-                
+            <!-- MUTTON GRAVY SECTION -->
+            <div class="menu-section mutton-section">
+                <h2 class="section-title">MUTTON GRAVY & CURRIES</h2>
                 <div class="menu-items">
-                    <!-- Special Item -->
                     <div class="menu-item">
-                        <div class="item-number">S</div>
-                        <div class="item-details">
-                            <h3 class="item-name">MALAI TIKKA BIRYANI</h3>
-                            <p class="item-description">Creamy malai tikka chicken with mild spices and saffron rice</p>
-                            <div class="spice-level">
+                        <h3 class="item-name">MUTTON GRAVY</h3>
+                        <p class="item-description">Rich and flavorful traditional mutton curry</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">MUTTON PALAK GOSHT</h3>
+                        <p class="item-description">Mutton cooked with fresh spinach and spices</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">MUTTON GREEN KORMA</h3>
+                        <p class="item-description">Creamy green korma with tender mutton</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
                                 <div class="spice-dot active"></div>
                                 <div class="spice-dot"></div>
                                 <div class="spice-dot"></div>
                             </div>
                         </div>
-                        <div class="item-icon">
-                            <i class="fas fa-cheese"></i>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">MUTTON WHITE KORMA</h3>
+                        <p class="item-description">Mild white korma with cashew and cream</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot"></div>
+                                <div class="spice-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">MUTTON ALOO GOSHT</h3>
+                        <p class="item-description">Mutton cooked with potatoes in traditional spices</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">MUTTON DO PYAZA</h3>
+                        <p class="item-description">Mutton cooked with double onions and spices</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MUTTON BIRYANI SECTION -->
+            <div class="menu-section mutton-section">
+                <h2 class="section-title">MUTTON BIRYANI COLLECTION</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <h3 class="item-name">MUTTON BIRYANI</h3>
+                        <p class="item-description">Traditional aromatic rice with tender mutton pieces</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">MUTTON DUM BIRYANI</h3>
+                        <p class="item-description">Slow-cooked dum style mutton biryani</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">MUTTON TIKKA BIRYANI</h3>
+                        <p class="item-description">Tandoori mutton tikka pieces with fragrant rice</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">MUTTON TANDOORI BIRYANI</h3>
+                        <p class="item-description">Smoky tandoori mutton with traditional biryani rice</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">MUTTON AFGHANI BIRYANI</h3>
+                        <p class="item-description">Creamy Afghani style mutton biryani</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHICKEN BIRYANI SECTION -->
+            <div class="menu-section chicken-section">
+                <h2 class="section-title">CHICKEN BIRYANI COLLECTION</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <h3 class="item-name">CHICKEN BIRYANI</h3>
+                        <p class="item-description">Traditional aromatic basmati rice with succulent chicken pieces</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">CHICKEN DUM BIRYANI</h3>
+                        <p class="item-description">Slow-cooked chicken biryani in traditional dum style</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">CHICKEN TIKKA BIRYANI</h3>
+                        <p class="item-description">Tandoori chicken tikka pieces layered with fragrant rice</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">CHICKEN TANDOORI BIRYANI</h3>
+                        <p class="item-description">Smoky tandoori chicken with traditional biryani rice</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">CHICKEN AFGHANI BIRYANI</h3>
+                        <p class="item-description">Creamy, rich biryani with Afghan-inspired spices</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHICKEN PULAO SECTION -->
+            <div class="menu-section pulao-section">
+                <h2 class="section-title">CHICKEN PULAO COLLECTION</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <h3 class="item-name">CHICKEN PULAO</h3>
+                        <p class="item-description">Traditional chicken pulao with aromatic spices</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">CHICKEN WHITE PULAO</h3>
+                        <p class="item-description">Mild white pulao with chicken and nuts</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot"></div>
+                                <div class="spice-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">CHICKEN AFGHANI PULAO</h3>
+                        <p class="item-description">Creamy Afghani style chicken pulao</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">CHICKEN JEERA PULAO</h3>
+                        <p class="item-description">Cumin flavored chicken pulao</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot"></div>
+                                <div class="spice-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">CHICKEN LUCKNOWI PULAO</h3>
+                        <p class="item-description">Awadhi style chicken pulao with delicate spices</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SPECIAL DISHES SECTION -->
+            <div class="menu-section">
+                <h2 class="section-title">SPECIALTY DISHES</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <h3 class="item-name">MALAI TIKKA BIRYANI</h3>
+                        <p class="item-description">Creamy malai tikka chicken with mild spices and saffron rice</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot"></div>
+                                <div class="spice-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">ZAMZAM BIRYANI</h3>
+                        <p class="item-description">Special royal biryani with premium ingredients</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="item-name">ZAMZAM PULAO</h3>
+                        <p class="item-description">Special royal pulao with exotic spices</p>
+                        <div class="spice-indicator">
+                            <span class="spice-text">Spice:</span>
+                            <div class="spice-dots">
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot active"></div>
+                                <div class="spice-dot"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -558,6 +715,30 @@
                 this.style.transform = 'translateY(0)';
             });
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.menu-section');
+            sections.forEach((section, index) => {
+                section.style.animationDelay = `${index * 0.1}s`;
+                section.style.animation = 'fadeInUp 0.5s ease forwards';
+                section.style.opacity = '0';
+            });
+        });
+
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 
 </body>
