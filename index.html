@@ -34,7 +34,6 @@
             overflow-x: hidden;
         }
 
-        /* Golden Particles Animation */
         .gold-particle {
             position: fixed;
             background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%);
@@ -43,7 +42,7 @@
             z-index: 0;
         }
 
-        /* Main Menu Container */
+
         .menu-container {
             width: 100%;
             max-width: 1400px;
@@ -63,7 +62,7 @@
             z-index: 1;
         }
 
-        /* Decorative Corners */
+ 
         .corner-decoration {
             position: absolute;
             width: 120px;
@@ -85,7 +84,7 @@
             clip-path: polygon(0 0, 100% 0, 100% 100%);
         }
 
-        /* Header Section */
+
         .menu-header {
             position: relative;
             padding: 60px 50px;
@@ -210,49 +209,7 @@
                 0 0 35px rgba(212, 175, 55, 0.15) inset;
         }
 
-        /* Chicken Biryani Logo (Removed from starters, kept for reference if needed elsewhere) */
-        .biryani-logo {
-            font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
-            background: linear-gradient(135deg, 
-                #FFD700 0%, 
-                #D4AF37 50%, 
-                #8B0000 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-align: center;
-            margin: 30px 0;
-            padding: 20px;
-            border: 2px solid rgba(212, 175, 55, 0.3);
-            border-radius: 15px;
-            background: rgba(0, 0, 0, 0.4);
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-        }
 
-        .biryani-logo::before {
-            content: "🍗🍚";
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2rem;
-            opacity: 0.5;
-        }
-
-        .biryani-logo::after {
-            content: "🍗🍚";
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2rem;
-            opacity: 0.5;
-        }
-
-        /* Category Navigation */
         .category-nav {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -324,7 +281,6 @@
             position: relative;
         }
 
-        /* Menu Items Display */
         .items-display {
             display: none;
             animation: fadeIn 0.5s ease;
@@ -436,7 +392,7 @@
             line-height: 1.6;
         }
 
-        /* Special Items */
+
         .special-item {
             border: 2px solid rgba(212, 175, 55, 0.3);
             background: 
@@ -449,7 +405,7 @@
             border: 2px solid rgba(212, 175, 55, 0.5);
         }
 
-        /* Subcategory Styling */
+
         .subcategory-section {
             margin: 40px 0;
             padding: 25px;
@@ -474,7 +430,6 @@
             gap: 15px;
         }
 
-        /* Back Button */
         .back-button {
             display: inline-flex;
             align-items: center;
@@ -497,7 +452,6 @@
             transform: translateX(-5px);
         }
 
-        /* Footer */
         .menu-footer {
             padding: 50px 40px;
             background: 
@@ -565,8 +519,7 @@
             font-size: 1.1rem;
             margin-bottom: 10px;
         }
-
-        /* Chicken Biryani Icon - Now used in chicken biryani menu */
+        
         .biryani-icon-wrapper {
             display: inline-flex;
             align-items: center;
@@ -585,14 +538,12 @@
             100% { transform: scale(1); }
         }
 
-        /* Paw and Naan Icon */
         .paw-naan-icon {
             color: #D4AF37;
             font-size: 2rem;
             margin-right: 10px;
         }
 
-        /* Roti Section Special Styling */
         .roti-item {
             position: relative;
         }
@@ -606,7 +557,6 @@
             opacity: 0.3;
         }
 
-        /* Kebab/Tikka Item Styling */
         .kebab-item {
             position: relative;
         }
@@ -620,7 +570,6 @@
             opacity: 0.3;
         }
 
-        /* Tandoori Item Styling */
         .tandoori-item {
             position: relative;
         }
@@ -634,7 +583,6 @@
             opacity: 0.3;
         }
 
-        /* Chinese Item Styling */
         .chinese-item {
             position: relative;
         }
@@ -648,7 +596,6 @@
             opacity: 0.3;
         }
 
-        /* Shawarma Item Styling */
         .shawarma-item {
             position: relative;
         }
@@ -662,7 +609,6 @@
             opacity: 0.3;
         }
 
-        /* Responsive Design */
         @media (max-width: 1200px) {
             .main-title {
                 font-size: 3.8rem;
@@ -761,17 +707,15 @@
 </head>
 <body>
 
-    <!-- Golden Particles Background -->
     <div id="particles"></div>
 
-    <!-- Corner Decorations -->
     <div class="corner-decoration corner-tl"></div>
     <div class="corner-decoration corner-tr"></div>
     <div class="corner-decoration corner-bl"></div>
     <div class="corner-decoration corner-br"></div>
 
     <div class="menu-container">
-        <!-- Header -->
+
         <div class="menu-header">
             <div class="header-glow"></div>
             <div class="logo-display">
@@ -786,7 +730,6 @@
             </div>
         </div>
 
-        <!-- Category Navigation -->
         <div class="category-nav">
             <div class="category-card" onclick="showCategory('starters')">
                 <div class="category-icon"><i class="fas fa-fire"></i></div>
@@ -837,16 +780,15 @@
             </div>
         </div>
 
-        <!-- Menu Content Area - Initially Hidden -->
+
         <div class="menu-content" id="menu-content" style="display: none;">
-            <!-- Starters Category -->
+
             <div class="items-display" id="starters-items">
                 <div class="items-header">
                     <h2 class="items-title">STARTERS COLLECTION</h2>
                     <div class="items-count">70+ Premium Items</div>
                 </div>
-                
-                <!-- Chicken Kebab / Tandoori Items -->
+
                 <div class="subcategory-section">
                     <h3 class="subcategory-title">CHICKEN KEBAB / TANDOORI ITEMS (22 Items)</h3>
                     <div class="subcategory-grid">
@@ -963,7 +905,6 @@
                     </div>
                 </div>
 
-                <!-- Tandoori / Grill / Leg / Wings -->
                 <div class="subcategory-section">
                     <h3 class="subcategory-title">TANDOORI / GRILL / LEG / WINGS (8 Items)</h3>
                     <div class="subcategory-grid">
@@ -1010,7 +951,6 @@
                     </div>
                 </div>
 
-                <!-- Chicken Tikka Types -->
                 <div class="subcategory-section">
                     <h3 class="subcategory-title">CHICKEN TIKKA VARIETIES (13 Items)</h3>
                     <div class="subcategory-grid">
@@ -1082,7 +1022,6 @@
                     </div>
                 </div>
 
-                <!-- Chinese / Dry / Gravy -->
                 <div class="subcategory-section">
                     <h3 class="subcategory-title">CHINESE / DRY / GRAVY (20 Items)</h3>
                     <div class="subcategory-grid">
@@ -1189,7 +1128,6 @@
                     </div>
                 </div>
 
-                <!-- Special Grill / Shawarma -->
                 <div class="subcategory-section">
                     <h3 class="subcategory-title">SPECIAL GRILL / SHAWARMA (7 Items)</h3>
                     <div class="subcategory-grid">
@@ -1236,7 +1174,6 @@
                 </div>
             </div>
 
-            <!-- Mutton Gravy Category -->
             <div class="items-display" id="mutton-gravy-items">
                 <div class="items-header">
                     <h2 class="items-title">MUTTON CURRIES & GRAVY</h2>
@@ -1304,7 +1241,6 @@
                     </div>
                 </div>
 
-                <!-- Mutton Biryani Category -->
                 <div class="items-display" id="mutton-biryani-items">
                     <div class="items-header">
                         <h2 class="items-title">MUTTON BIRYANI COLLECTION</h2>
@@ -1372,7 +1308,6 @@
                     </div>
                 </div>
 
-                <!-- Chicken Biryani Category - Now with chicken biryani icon -->
                 <div class="items-display" id="chicken-biryani-items">
                     <div class="items-header">
                         <div class="biryani-icon-wrapper">
@@ -1443,7 +1378,6 @@
                     </div>
                 </div>
 
-                <!-- Chicken Pulao Category -->
                 <div class="items-display" id="chicken-pulao-items">
                     <div class="items-header">
                         <h2 class="items-title">CHICKEN PULAO COLLECTION</h2>
@@ -1486,7 +1420,6 @@
                     </div>
                 </div>
 
-                <!-- Roti & Breads Category -->
                 <div class="items-display" id="rotis-items">
                     <div class="items-header">
                         <h2 class="items-title">ROTI & INDIAN BREADS COLLECTION</h2>
@@ -1539,7 +1472,6 @@
                     </div>
                 </div>
 
-                <!-- Special Dishes Category -->
                 <div class="items-display" id="special-items">
                     <div class="items-header">
                         <h2 class="items-title">SPECIALTY DISHES</h2>
@@ -1607,7 +1539,6 @@
                     </div>
                 </div>
 
-                <!-- Sweets & Desserts Category -->
                 <div class="items-display" id="sweets-items">
                     <div class="items-header">
                         <h2 class="items-title">SWEETS & DESSERTS</h2>
@@ -1666,7 +1597,6 @@
                 </div>
             </div>
 
-            <!-- Footer -->
             <div class="menu-footer" id="menu-footer">
                 <div class="footer-content">
                     <div class="contact-info">
@@ -1689,6 +1619,7 @@
                         <h3><i class="fas fa-clock"></i> WORKING HOURS</h3>
                         <p>Monday - Sunday</p>
                         <p>08:00 AM - 10:00 PM</p>
+                        <p>~WE TAKE ADVANCED ORDERS FOR WEDDINGS,PARTIES&EVENTS~</p>
                     </div>
                 </div>
             </div>
@@ -1822,3 +1753,4 @@
         </script>
     </body>
     </html>
+
