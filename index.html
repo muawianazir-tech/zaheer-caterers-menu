@@ -210,10 +210,52 @@
                 0 0 35px rgba(212, 175, 55, 0.15) inset;
         }
 
+        /* Chicken Biryani Logo (Removed from starters, kept for reference if needed elsewhere) */
+        .biryani-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, 
+                #FFD700 0%, 
+                #D4AF37 50%, 
+                #8B0000 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .biryani-logo::before {
+            content: "🍗🍚";
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            opacity: 0.5;
+        }
+
+        .biryani-logo::after {
+            content: "🍗🍚";
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            opacity: 0.5;
+        }
+
         /* Category Navigation */
         .category-nav {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             padding: 40px;
             background: rgba(0, 0, 0, 0.3);
@@ -226,7 +268,7 @@
                     rgba(25, 25, 25, 0.8) 0%, 
                     rgba(0, 0, 0, 0.9) 100%);
             border-radius: 18px;
-            padding: 30px 25px;
+            padding: 25px 20px;
             border: 2px solid rgba(212, 175, 55, 0.15);
             cursor: pointer;
             transition: all 0.4s ease;
@@ -255,23 +297,23 @@
         }
 
         .category-icon {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             color: #D4AF37;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
         }
 
         .category-title {
             font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: #FFD700;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             letter-spacing: 1.5px;
         }
 
         .category-count {
             color: #FFE4B5;
-            font-size: 1rem;
+            font-size: 0.95rem;
             opacity: 0.8;
         }
 
@@ -330,7 +372,7 @@
 
         .items-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
 
@@ -405,6 +447,31 @@
 
         .special-item .item-number {
             border: 2px solid rgba(212, 175, 55, 0.5);
+        }
+
+        /* Subcategory Styling */
+        .subcategory-section {
+            margin: 40px 0;
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .subcategory-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: #D4AF37;
+            margin-bottom: 25px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .subcategory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
         }
 
         /* Back Button */
@@ -499,11 +566,100 @@
             margin-bottom: 10px;
         }
 
-        /* Chicken Biryani Icon */
-        .chicken-biryani-icon {
+        /* Chicken Biryani Icon - Now used in chicken biryani menu */
+        .biryani-icon-wrapper {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .biryani-icon {
             color: #D4AF37;
-            font-size: 1.5rem;
-            margin-left: 10px;
+            font-size: 2rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Paw and Naan Icon */
+        .paw-naan-icon {
+            color: #D4AF37;
+            font-size: 2rem;
+            margin-right: 10px;
+        }
+
+        /* Roti Section Special Styling */
+        .roti-item {
+            position: relative;
+        }
+
+        .roti-item::before {
+            content: "🥯";
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            font-size: 1.8rem;
+            opacity: 0.3;
+        }
+
+        /* Kebab/Tikka Item Styling */
+        .kebab-item {
+            position: relative;
+        }
+
+        .kebab-item::before {
+            content: "🍢";
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            font-size: 1.8rem;
+            opacity: 0.3;
+        }
+
+        /* Tandoori Item Styling */
+        .tandoori-item {
+            position: relative;
+        }
+
+        .tandoori-item::before {
+            content: "🍗";
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            font-size: 1.8rem;
+            opacity: 0.3;
+        }
+
+        /* Chinese Item Styling */
+        .chinese-item {
+            position: relative;
+        }
+
+        .chinese-item::before {
+            content: "🥡";
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            font-size: 1.8rem;
+            opacity: 0.3;
+        }
+
+        /* Shawarma Item Styling */
+        .shawarma-item {
+            position: relative;
+        }
+
+        .shawarma-item::before {
+            content: "🌯";
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            font-size: 1.8rem;
+            opacity: 0.3;
         }
 
         /* Responsive Design */
@@ -513,6 +669,12 @@
             }
             .items-grid {
                 grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+            .category-nav {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+            .subcategory-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             }
         }
 
@@ -531,6 +693,9 @@
             .logo-frame {
                 width: 150px;
                 height: 150px;
+            }
+            .biryani-logo {
+                font-size: 2rem;
             }
         }
 
@@ -561,6 +726,9 @@
             .items-title {
                 font-size: 2.2rem;
             }
+            .subcategory-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 480px) {
@@ -583,6 +751,10 @@
             }
             .category-title {
                 font-size: 1.6rem;
+            }
+            .biryani-logo {
+                font-size: 1.8rem;
+                padding: 15px;
             }
         }
     </style>
@@ -617,9 +789,9 @@
         <!-- Category Navigation -->
         <div class="category-nav">
             <div class="category-card" onclick="showCategory('starters')">
-                <div class="category-icon"><i class="fas fa-utensils"></i></div>
+                <div class="category-icon"><i class="fas fa-fire"></i></div>
                 <h3 class="category-title">STARTERS</h3>
-                <p class="category-count">100+ Exquisite Dishes</p>
+                <p class="category-count">70+ Premium Items</p>
             </div>
             
             <div class="category-card" onclick="showCategory('mutton-gravy')">
@@ -646,6 +818,12 @@
                 <p class="category-count">6 Special Varieties</p>
             </div>
             
+            <div class="category-card" onclick="showCategory('rotis')">
+                <div class="category-icon"><i class="fas fa-bread-slice paw-naan-icon"></i></div>
+                <h3 class="category-title">ROTI & BREADS</h3>
+                <p class="category-count">8 Types</p>
+            </div>
+            
             <div class="category-card" onclick="showCategory('special')">
                 <div class="category-icon"><i class="fas fa-star"></i></div>
                 <h3 class="category-title">SPECIAL DISHES</h3>
@@ -655,7 +833,7 @@
             <div class="category-card" onclick="showCategory('sweets')">
                 <div class="category-icon"><i class="fas fa-ice-cream"></i></div>
                 <h3 class="category-title">SWEETS & DESSERTS</h3>
-                <p class="category-count">4 Delicious Treats</p>
+                <p class="category-count">9 Delicious Treats</p>
             </div>
         </div>
 
@@ -664,16 +842,395 @@
             <!-- Starters Category -->
             <div class="items-display" id="starters-items">
                 <div class="items-header">
-                    <h2 class="items-title">STARTER COLLECTION</h2>
-                    <div class="items-count">100+ Items</div>
+                    <h2 class="items-title">STARTERS COLLECTION</h2>
+                    <div class="items-count">70+ Premium Items</div>
                 </div>
-                <div class="items-grid">
-                    <div class="menu-item special-item">
-                        <div class="item-number">★</div>
-                        <h3 class="item-name">100+ EXQUISITE STARTERS</h3>
-                        <p class="item-description">An extensive collection of premium appetizers, kebabs, and starters featuring the finest ingredients and traditional recipes from across India.</p>
+                
+                <!-- Chicken Kebab / Tandoori Items -->
+                <div class="subcategory-section">
+                    <h3 class="subcategory-title">CHICKEN KEBAB / TANDOORI ITEMS (22 Items)</h3>
+                    <div class="subcategory-grid">
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">01</div>
+                            <h3 class="item-name">MALAI KABAB</h3>
+                            <p class="item-description">Creamy marinated chicken kabab with cashew paste.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">02</div>
+                            <h3 class="item-name">SIKANDAR KABAB</h3>
+                            <p class="item-description">Royal style chicken kabab with rich Mughlai spices.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">03</div>
+                            <h3 class="item-name">PESHAWARI KABAB</h3>
+                            <p class="item-description">Traditional Peshawari style kabab with local spices.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">04</div>
+                            <h3 class="item-name">AFGHANI KABAB</h3>
+                            <p class="item-description">Afghani style creamy kabab with yogurt marinade.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">05</div>
+                            <h3 class="item-name">ACHARI KABAB</h3>
+                            <p class="item-description">Pickle flavored chicken kabab with tangy spices.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">06</div>
+                            <h3 class="item-name">RESHMI KABAB</h3>
+                            <p class="item-description">Silky smooth chicken kabab with cream marinade.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">07</div>
+                            <h3 class="item-name">KASHMIRI KABAB</h3>
+                            <p class="item-description">Kashmiri spices chicken kabab with mild flavors.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">08</div>
+                            <h3 class="item-name">VINEGAR KABAB</h3>
+                            <p class="item-description">Vinegar marinated chicken kabab with tangy taste.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">09</div>
+                            <h3 class="item-name">KURKURE KABAB</h3>
+                            <p class="item-description">Crispy chicken kabab with crunchy texture.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">10</div>
+                            <h3 class="item-name">SUNHERA KABAB</h3>
+                            <p class="item-description">Golden fried chicken kabab with special marinade.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">11</div>
+                            <h3 class="item-name">GARLIC KABAB</h3>
+                            <p class="item-description">Garlic infused chicken kabab with aromatic flavors.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">12</div>
+                            <h3 class="item-name">KALIMIRI KABAB</h3>
+                            <p class="item-description">Black pepper chicken kabab with spicy kick.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">13</div>
+                            <h3 class="item-name">SAHI SEEKH</h3>
+                            <p class="item-description">Royal chicken seekh kabab with premium spices.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">14</div>
+                            <h3 class="item-name">LASOONI SEEKH</h3>
+                            <p class="item-description">Garlic chicken seekh kabab with bold flavors.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">15</div>
+                            <h3 class="item-name">MURG SPECIAL KABAB</h3>
+                            <p class="item-description">Special chicken kabab with secret recipe.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">16</div>
+                            <h3 class="item-name">KHAZANA KABAB</h3>
+                            <p class="item-description">Treasure chicken kabab with exotic ingredients.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">17</div>
+                            <h3 class="item-name">BADSHAHI KABAB</h3>
+                            <p class="item-description">Emperor style chicken kabab with royal treatment.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">18</div>
+                            <h3 class="item-name">MURG MOGHLAI KABAB</h3>
+                            <p class="item-description">Mughlai style chicken kabab with rich gravy.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">19</div>
+                            <h3 class="item-name">MURG ZAFRANI KABAB</h3>
+                            <p class="item-description">Saffron chicken kabab with premium aroma.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">20</div>
+                            <h3 class="item-name">KAPOOR SPECIAL KABAB</h3>
+                            <p class="item-description">Kapoor family special kabab recipe.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">21</div>
+                            <h3 class="item-name">MURG MASALA KABAB</h3>
+                            <p class="item-description">Spicy masala chicken kabab with traditional spices.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">22</div>
+                            <h3 class="item-name">LEMON PEPPER KABAB</h3>
+                            <p class="item-description">Zesty lemon and pepper marinated chicken kabab.</p>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Tandoori / Grill / Leg / Wings -->
+                <div class="subcategory-section">
+                    <h3 class="subcategory-title">TANDOORI / GRILL / LEG / WINGS (8 Items)</h3>
+                    <div class="subcategory-grid">
+                        <div class="menu-item tandoori-item">
+                            <div class="item-number">01</div>
+                            <h3 class="item-name">CHICKEN TANDOORI</h3>
+                            <p class="item-description">Classic whole chicken marinated in yogurt and spices.</p>
+                        </div>
+                        <div class="menu-item tandoori-item">
+                            <div class="item-number">02</div>
+                            <h3 class="item-name">TANGDI KABAB</h3>
+                            <p class="item-description">Chicken drumsticks marinated in special spices.</p>
+                        </div>
+                        <div class="menu-item tandoori-item">
+                            <div class="item-number">03</div>
+                            <h3 class="item-name">AFGHANI TANGDI</h3>
+                            <p class="item-description">Creamy Afghani style chicken drumsticks.</p>
+                        </div>
+                        <div class="menu-item tandoori-item">
+                            <div class="item-number">04</div>
+                            <h3 class="item-name">TANDOORI WINGS</h3>
+                            <p class="item-description">Chicken wings marinated in traditional tandoori spices.</p>
+                        </div>
+                        <div class="menu-item tandoori-item">
+                            <div class="item-number">05</div>
+                            <h3 class="item-name">PERI PERI WINGS</h3>
+                            <p class="item-description">Spicy peri peri marinated chicken wings.</p>
+                        </div>
+                        <div class="menu-item tandoori-item">
+                            <div class="item-number">06</div>
+                            <h3 class="item-name">BBQ WINGS</h3>
+                            <p class="item-description">Barbecue glazed chicken wings with smoky flavor.</p>
+                        </div>
+                        <div class="menu-item tandoori-item">
+                            <div class="item-number">07</div>
+                            <h3 class="item-name">MASALA WINGS</h3>
+                            <p class="item-description">Chicken wings with traditional Indian masala.</p>
+                        </div>
+                        <div class="menu-item tandoori-item">
+                            <div class="item-number">08</div>
+                            <h3 class="item-name">CRISPY WINGS</h3>
+                            <p class="item-description">Extra crispy fried chicken wings.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chicken Tikka Types -->
+                <div class="subcategory-section">
+                    <h3 class="subcategory-title">CHICKEN TIKKA VARIETIES (13 Items)</h3>
+                    <div class="subcategory-grid">
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">01</div>
+                            <h3 class="item-name">CHICKEN TIKKA</h3>
+                            <p class="item-description">Classic boneless chicken pieces in tandoori marinade.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">02</div>
+                            <h3 class="item-name">HARIYALI TIKKA</h3>
+                            <p class="item-description">Green herb marinated chicken tikka.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">03</div>
+                            <h3 class="item-name">LASOONI TIKKA</h3>
+                            <p class="item-description">Garlic infused chicken tikka.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">04</div>
+                            <h3 class="item-name">ACHARI TIKKA</h3>
+                            <p class="item-description">Pickle flavored chicken tikka.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">05</div>
+                            <h3 class="item-name">AFGHANI TIKKA</h3>
+                            <p class="item-description">Creamy Afghani style chicken tikka.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">06</div>
+                            <h3 class="item-name">RESHMI TIKKA</h3>
+                            <p class="item-description">Silky smooth cream chicken tikka.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">07</div>
+                            <h3 class="item-name">KALIMIRI TIKKA</h3>
+                            <p class="item-description">Black pepper chicken tikka.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">08</div>
+                            <h3 class="item-name">KASHMIRI TIKKA</h3>
+                            <p class="item-description">Kashmiri spices chicken tikka.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">09</div>
+                            <h3 class="item-name">LEMON TIKKA</h3>
+                            <p class="item-description">Zesty lemon marinated chicken tikka.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">10</div>
+                            <h3 class="item-name">ZAFRANI TIKKA</h3>
+                            <p class="item-description">Saffron infused chicken tikka.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">11</div>
+                            <h3 class="item-name">TANDOORI TIKKA</h3>
+                            <p class="item-description">Traditional tandoori style chicken tikka.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">12</div>
+                            <h3 class="item-name">SEEKH TIKKA</h3>
+                            <p class="item-description">Minced chicken tikka on skewers.</p>
+                        </div>
+                        <div class="menu-item kebab-item">
+                            <div class="item-number">13</div>
+                            <h3 class="item-name">MALAI TIKKA</h3>
+                            <p class="item-description">Creamy cashew marinated chicken tikka.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chinese / Dry / Gravy -->
+                <div class="subcategory-section">
+                    <h3 class="subcategory-title">CHINESE / DRY / GRAVY (20 Items)</h3>
+                    <div class="subcategory-grid">
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">01</div>
+                            <h3 class="item-name">CHICKEN LOLLIPOP</h3>
+                            <p class="item-description">French cut chicken wings, deep fried with spices.</p>
+                        </div>
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">02</div>
+                            <h3 class="item-name">CHICKEN CRISPY</h3>
+                            <p class="item-description">Crispy fried chicken with special seasoning.</p>
+                        </div>
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">03</div>
+                            <h3 class="item-name">CHICKEN MANCHURIAN DRY</h3>
+                            <p class="item-description">Dry version of Indo-Chinese favorite.</p>
+                        </div>
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">04</div>
+                            <h3 class="item-name">CHICKEN MANCHURIAN GRAVY</h3>
+                            <p class="item-description">Chicken balls in tangy Manchurian sauce.</p>
+                        </div>
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">05</div>
+                            <h3 class="item-name">CHICKEN CHILLI DRY</h3>
+                            <p class="item-description">Dry chilli chicken with vegetables.</p>
+                        </div>
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">06</div>
+                            <h3 class="item-name">CHICKEN CHILLI GRAVY</h3>
+                            <p class="item-description">Chicken in spicy chilli sauce with gravy.</p>
+                        </div>
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">07</div>
+                            <h3 class="item-name">CHICKEN 65</h3>
+                            <p class="item-description">Classic deep fried chicken with South Indian spices.</p>
+                        </div>
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">08</div>
+                            <h3 class="item-name">CHICKEN 95</h3>
+                            <p class="item-description">Premium version of chicken 65 with extra spices.</p>
+                        </div>
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">09</div>
+                            <h3 class="item-name">CHICKEN HOT GARLIC</h3>
+                            <p class="item-description">Spicy garlic flavored chicken.</p>
+                        </div>
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">10</div>
+                            <h3 class="item-name">CHICKEN SCHEZWAN</h3>
+                            <p class="item-description">Spicy Schezwan sauce chicken.</p>
+                        </div>
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">11</div>
+                            <h3 class="item-name">CHICKEN TRIPLE RICE</h3>
+                            <p class="item-description">Three flavored chicken with rice.</p>
+                        </div>
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">12</div>
+                            <h3 class="item-name">MONGOLIAN CHICKEN</h3>
+                            <p class="item-description">Stir fried chicken with Mongolian sauce.</p>
+                        </div>
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">13</div>
+                            <h3 class="item-name">HUNAN CHICKEN</h3>
+                            <p class="item-description">Spicy Hunan style chicken with vegetables.</p>
+                        </div>
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">14</div>
+                            <h3 class="item-name">DRAGON CHICKEN</h3>
+                            <p class="item-description">Extra spicy dragon sauce chicken.</p>
+                        </div>
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">15</div>
+                            <h3 class="item-name">CHICKEN PAPER SOUP</h3>
+                            <p class="item-description">Thin chicken soup with vegetables.</p>
+                        </div>
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">16</div>
+                            <h3 class="item-name">HOT & SOUR SOUP</h3>
+                            <p class="item-description">Classic Chinese hot and sour soup.</p>
+                        </div>
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">17</div>
+                            <h3 class="item-name">MANCHOW SOUP</h3>
+                            <p class="item-description">Spicy Manchow soup with chicken.</p>
+                        </div>
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">18</div>
+                            <h3 class="item-name">LEMON CORIANDER SOUP</h3>
+                            <p class="item-description">Refreshing lemon coriander chicken soup.</p>
+                        </div>
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">19</div>
+                            <h3 class="item-name">CREAMY CHICKEN SOUP</h3>
+                            <p class="item-description">Cream based chicken soup with herbs.</p>
+                        </div>
+                        <div class="menu-item chinese-item">
+                            <div class="item-number">20</div>
+                            <h3 class="item-name">TOM YUM SOUP</h3>
+                            <p class="item-description">Thai style spicy and sour soup.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Special Grill / Shawarma -->
+                <div class="subcategory-section">
+                    <h3 class="subcategory-title">SPECIAL GRILL / SHAWARMA (7 Items)</h3>
+                    <div class="subcategory-grid">
+                        <div class="menu-item shawarma-item">
+                            <div class="item-number">01</div>
+                            <h3 class="item-name">CHICKEN SHAWARMA</h3>
+                            <p class="item-description">Traditional Middle Eastern chicken shawarma.</p>
+                        </div>
+                        <div class="menu-item shawarma-item">
+                            <div class="item-number">02</div>
+                            <h3 class="item-name">SPECIAL SHAWARMA</h3>
+                            <p class="item-description">Special recipe chicken shawarma with extra fillings.</p>
+                        </div>
+                        <div class="menu-item shawarma-item">
+                            <div class="item-number">03</div>
+                            <h3 class="item-name">LEBANESE SHAWARMA</h3>
+                            <p class="item-description">Authentic Lebanese style chicken shawarma.</p>
+                        </div>
+                        <div class="menu-item shawarma-item">
+                            <div class="item-number">04</div>
+                            <h3 class="item-name">ARABIAN SHAWARMA ROLL</h3>
+                            <p class="item-description">Arabian style chicken shawarma in roll.</p>
+                        </div>
+                        <div class="menu-item shawarma-item">
+                            <div class="item-number">05</div>
+                            <h3 class="item-name">ZINGER SHAWARMA</h3>
+                            <p class="item-description">Crispy chicken zinger in shawarma wrap.</p>
+                        </div>
+                        <div class="menu-item shawarma-item">
+                            <div class="item-number">06</div>
+                            <h3 class="item-name">CHICKEN CHEESE SHAWARMA</h3>
+                            <p class="item-description">Chicken shawarma with melted cheese.</p>
+                        </div>
+                        <div class="menu-item shawarma-item">
+                            <div class="item-number">07</div>
+                            <h3 class="item-name">CHICKEN MAYO SHAWARMA</h3>
+                            <p class="item-description">Chicken shawarma with special mayo sauce.</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="back-button" onclick="hideCategory()">
                     <i class="fas fa-arrow-left"></i> Back to Categories
                 </div>
@@ -723,490 +1280,545 @@
                     </div>
                     <div class="menu-item">
                         <div class="item-number">08</div>
-                        <h3 class="item-name">MUTTON LAAL MASALA</h3>
-                        <p class="item-description">Fiery red mutton curry with special masala blend.</p>
+                        <h3 class="item-name">MUTTON LAL MASALA</h3>
+                            <p class="item-description">Fiery red mutton curry with special masala blend.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">09</div>
+                            <h3 class="item-name">MUTTON NIHARI</h3>
+                            <p class="item-description">Slow-cooked traditional nihari with bone marrow.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">10</div>
+                            <h3 class="item-name">MUTTON BUKHARA</h3>
+                            <p class="item-description">Dum pukht style mutton with Bukhara spices.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">11</div>
+                            <h3 class="item-name">MUTTON BLACK GOSHT</h3>
+                            <p class="item-description">Special black pepper mutton with secret spices.</p>
+                        </div>
                     </div>
-                    <div class="menu-item">
-                        <div class="item-number">09</div>
-                        <h3 class="item-name">MUTTON NIHARI</h3>
-                        <p class="item-description">Slow-cooked traditional nihari with bone marrow.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">10</div>
-                        <h3 class="item-name">MUTTON BUKHARA</h3>
-                        <p class="item-description">Dum pukht style mutton with Bukhara spices.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">11</div>
-                        <h3 class="item-name">MUTTON BLACK GOSHT</h3>
-                        <p class="item-description">Special black pepper mutton with secret spices.</p>
+                    <div class="back-button" onclick="hideCategory()">
+                        <i class="fas fa-arrow-left"></i> Back to Categories
                     </div>
                 </div>
-                <div class="back-button" onclick="hideCategory()">
-                    <i class="fas fa-arrow-left"></i> Back to Categories
+
+                <!-- Mutton Biryani Category -->
+                <div class="items-display" id="mutton-biryani-items">
+                    <div class="items-header">
+                        <h2 class="items-title">MUTTON BIRYANI COLLECTION</h2>
+                        <div class="items-count">11 Royal Varieties</div>
+                    </div>
+                    <div class="items-grid">
+                        <div class="menu-item">
+                            <div class="item-number">01</div>
+                            <h3 class="item-name">MUTTON BIRYANI</h3>
+                            <p class="item-description">Traditional aromatic basmati rice with tender mutton pieces.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">02</div>
+                            <h3 class="item-name">MUTTON DUM BIRYANI</h3>
+                            <p class="item-description">Slow-cooked dum style mutton biryani with saffron.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">03</div>
+                            <h3 class="item-name">MUTTON TIKKA BIRYANI</h3>
+                            <p class="item-description">Tandoori mutton tikka pieces with fragrant basmati rice.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">04</div>
+                            <h3 class="item-name">MUTTON TANDOORI BIRYANI</h3>
+                            <p class="item-description">Smoky tandoori mutton with traditional biryani rice.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">05</div>
+                            <h3 class="item-name">MUTTON WHITE BIRYANI</h3>
+                            <p class="item-description">Mild white biryani with tender mutton and delicate spices.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">06</div>
+                            <h3 class="item-name">MUTTON GREEN BIRYANI</h3>
+                            <p class="item-description">Herb-infused green biryani with mint and coriander.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">07</div>
+                            <h3 class="item-name">MUTTON AFGHANI BIRYANI</h3>
+                            <p class="item-description">Creamy Afghani style mutton biryani with dry fruits.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">08</div>
+                            <h3 class="item-name">MUTTON LUCKNOWI BIRYANI</h3>
+                            <p class="item-description">Awadhi style dum biryani with delicate spices and saffron.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">09</div>
+                            <h3 class="item-name">MUTTON HYDERABADI BIRYANI</h3>
+                            <p class="item-description">Spicy Hyderabadi style mutton biryani with authentic masalas.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">10</div>
+                            <h3 class="item-name">MUTTON SEEKH BIRYANI</h3>
+                            <p class="item-description">Mutton seekh kebab biryani with charcoal flavor.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">11</div>
+                            <h3 class="item-name">MUTTON KEEMA BIRYANI</h3>
+                            <p class="item-description">Minced mutton biryani with special spice blend.</p>
+                        </div>
+                    </div>
+                    <div class="back-button" onclick="hideCategory()">
+                        <i class="fas fa-arrow-left"></i> Back to Categories
+                    </div>
+                </div>
+
+                <!-- Chicken Biryani Category - Now with chicken biryani icon -->
+                <div class="items-display" id="chicken-biryani-items">
+                    <div class="items-header">
+                        <div class="biryani-icon-wrapper">
+                            <h2 class="items-title">CHICKEN BIRYANI COLLECTION</h2>
+                            <i class="fas fa-utensils biryani-icon"></i>
+                        </div>
+                        <div class="items-count">11 Premium Options</div>
+                    </div>
+                    <div class="items-grid">
+                        <div class="menu-item">
+                            <div class="item-number">01</div>
+                            <h3 class="item-name">CHICKEN BIRYANI</h3>
+                            <p class="item-description">Traditional aromatic basmati rice with succulent chicken pieces.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">02</div>
+                            <h3 class="item-name">CHICKEN DUM BIRYANI</h3>
+                            <p class="item-description">Slow-cooked chicken biryani in traditional dum style.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">03</div>
+                            <h3 class="item-name">CHICKEN TIKKA BIRYANI</h3>
+                            <p class="item-description">Tandoori chicken tikka pieces layered with fragrant rice.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">04</div>
+                            <h3 class="item-name">CHICKEN WHITE BIRYANI</h3>
+                            <p class="item-description">Mild white biryani with chicken and aromatic spices.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">05</div>
+                            <h3 class="item-name">CHICKEN AFGHANI BIRYANI</h3>
+                            <p class="item-description">Creamy, rich biryani with Afghan-inspired spices.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">06</div>
+                            <h3 class="item-name">CHICKEN TANDOORI BIRYANI</h3>
+                            <p class="item-description">Smoky tandoori chicken with traditional biryani rice.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">07</div>
+                            <h3 class="item-name">CHICKEN GREEN BIRYANI</h3>
+                            <p class="item-description">Herb-infused green biryani with mint and spices.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">08</div>
+                            <h3 class="item-name">CHICKEN SHAHIWAN BIRYANI</h3>
+                            <p class="item-description">Special Shahiwani style chicken biryani with rich flavors.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">09</div>
+                            <h3 class="item-name">CHICKEN LUCKNOWI BIRYANI</h3>
+                            <p class="item-description">Awadhi style chicken dum biryani with delicate spices.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">10</div>
+                            <h3 class="item-name">CHICKEN HYDERABADI BIRYANI</h3>
+                            <p class="item-description">Spicy traditional Hyderabadi chicken biryani.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">11</div>
+                            <h3 class="item-name">CHICKEN SEEKH BIRYANI</h3>
+                            <p class="item-description">Chicken seekh kebab biryani with charcoal aroma.</p>
+                        </div>
+                    </div>
+                    <div class="back-button" onclick="hideCategory()">
+                        <i class="fas fa-arrow-left"></i> Back to Categories
+                    </div>
+                </div>
+
+                <!-- Chicken Pulao Category -->
+                <div class="items-display" id="chicken-pulao-items">
+                    <div class="items-header">
+                        <h2 class="items-title">CHICKEN PULAO COLLECTION</h2>
+                        <div class="items-count">6 Special Varieties</div>
+                    </div>
+                    <div class="items-grid">
+                        <div class="menu-item">
+                            <div class="item-number">01</div>
+                            <h3 class="item-name">CHICKEN PULAO</h3>
+                            <p class="item-description">Traditional chicken pulao with aromatic spices and basmati rice.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">02</div>
+                            <h3 class="item-name">CHICKEN WHITE PULAO</h3>
+                            <p class="item-description">Mild white pulao with chicken, nuts, and delicate spices.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">03</div>
+                            <h3 class="item-name">CHICKEN AFGHANI PULAO</h3>
+                            <p class="item-description">Creamy Afghani style chicken pulao with dry fruits.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">04</div>
+                            <h3 class="item-name">CHICKEN JEERA PULAO</h3>
+                            <p class="item-description">Cumin flavored chicken pulao with aromatic rice.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">05</div>
+                            <h3 class="item-name">CHICKEN LUCKNOWI PULAO</h3>
+                            <p class="item-description">Awadhi style chicken pulao with delicate spices.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">06</div>
+                            <h3 class="item-name">ZAMZAM PULAO</h3>
+                            <p class="item-description">Special royal pulao with exotic spices and premium ingredients.</p>
+                        </div>
+                    </div>
+                    <div class="back-button" onclick="hideCategory()">
+                        <i class="fas fa-arrow-left"></i> Back to Categories
+                    </div>
+                </div>
+
+                <!-- Roti & Breads Category -->
+                <div class="items-display" id="rotis-items">
+                    <div class="items-header">
+                        <h2 class="items-title">ROTI & INDIAN BREADS COLLECTION</h2>
+                        <div class="items-count">8 Types</div>
+                    </div>
+                    <div class="items-grid">
+                        <div class="menu-item roti-item">
+                            <div class="item-number">01</div>
+                            <h3 class="item-name">BUTTER NAAN</h3>
+                            <p class="item-description">Fluffy, leavened white flour bread brushed with butter.</p>
+                        </div>
+                        <div class="menu-item roti-item">
+                            <div class="item-number">02</div>
+                            <h3 class="item-name">GARLIC NAAN</h3>
+                            <p class="item-description">Naan infused with fresh garlic and butter.</p>
+                        </div>
+                        <div class="menu-item roti-item">
+                            <div class="item-number">03</div>
+                            <h3 class="item-name">PLAIN ROTI</h3>
+                            <p class="item-description">Whole wheat unleavened flatbread.</p>
+                        </div>
+                        <div class="menu-item roti-item">
+                            <div class="item-number">04</div>
+                            <h3 class="item-name">BUTTER ROTI</h3>
+                            <p class="item-description">Whole wheat roti with butter.</p>
+                        </div>
+                        <div class="menu-item roti-item">
+                            <div class="item-number">05</div>
+                            <h3 class="item-name">TANDOORI ROTI</h3>
+                            <p class="item-description">Thick whole wheat bread cooked in clay oven.</p>
+                        </div>
+                        <div class="menu-item roti-item">
+                            <div class="item-number">06</div>
+                            <h3 class="item-name">LACCHA PARATHA</h3>
+                            <p class="item-description">Layered flaky flatbread.</p>
+                        </div>
+                        <div class="menu-item roti-item">
+                            <div class="item-number">07</div>
+                            <h3 class="item-name">RUMALI ROTI</h3>
+                            <p class="item-description">Thin "handkerchief" bread.</p>
+                        </div>
+                        <div class="menu-item roti-item">
+                            <div class="item-number">08</div>
+                            <h3 class="item-name">PAW & NAAN</h3>
+                            <p class="item-description">Special combination bread.</p>
+                        </div>
+                    </div>
+                    <div class="back-button" onclick="hideCategory()">
+                        <i class="fas fa-arrow-left"></i> Back to Categories
+                    </div>
+                </div>
+
+                <!-- Special Dishes Category -->
+                <div class="items-display" id="special-items">
+                    <div class="items-header">
+                        <h2 class="items-title">SPECIALTY DISHES</h2>
+                        <div class="items-count">12 Exclusive Creations</div>
+                    </div>
+                    <div class="items-grid">
+                        <div class="menu-item special-item">
+                            <div class="item-number">01</div>
+                            <h3 class="item-name">MUTTON JAFFRANI</h3>
+                            <p class="item-description">Rich mutton curry with saffron-infused gravy and premium spices.</p>
+                        </div>
+                        <div class="menu-item special-item">
+                            <div class="item-number">02</div>
+                            <h3 class="item-name">MUTTON AKHANI</h3>
+                            <p class="item-description">Special Awadhi style mutton preparation with unique spice blend.</p>
+                        </div>
+                        <div class="menu-item special-item">
+                            <div class="item-number">03</div>
+                            <h3 class="item-name">MUTTON BHUNA</h3>
+                            <p class="item-description">Dry mutton preparation cooked on slow fire with traditional bhuna technique.</p>
+                        </div>
+                        <div class="menu-item special-item">
+                            <div class="item-number">04</div>
+                            <h3 class="item-name">MUTTON BADAMI</h3>
+                            <p class="item-description">Creamy almond-based mutton curry with rich gravy.</p>
+                        </div>
+                        <div class="menu-item special-item">
+                            <div class="item-number">05</div>
+                            <h3 class="item-name">CHICKEN TIKKA MASALA</h3>
+                            <p class="item-description">Tandoori chicken tikka in rich, creamy tomato-based gravy.</p>
+                        </div>
+                        <div class="menu-item special-item">
+                            <div class="item-number">06</div>
+                            <h3 class="item-name">CHICKEN BHUNA</h3>
+                            <p class="item-description">Dry chicken preparation cooked with traditional bhuna spices.</p>
+                        </div>
+                        <div class="menu-item special-item">
+                            <div class="item-number">07</div>
+                            <h3 class="item-name">SEEKH BIRYANI</h3>
+                            <p class="item-description">Fragrant biryani layered with juicy seekh kebabs and basmati rice.</p>
+                        </div>
+                        <div class="menu-item special-item">
+                            <div class="item-number">08</div>
+                            <h3 class="item-name">MALAI TIKKA BIRYANI</h3>
+                            <p class="item-description">Creamy malai tikka chicken with mild spices and saffron rice.</p>
+                        </div>
+                        <div class="menu-item special-item">
+                            <div class="item-number">09</div>
+                            <h3 class="item-name">ZAMZAM BIRYANI</h3>
+                            <p class="item-description">Special royal biryani with premium ingredients and exotic spices.</p>
+                        </div>
+                        <div class="menu-item special-item">
+                            <div class="item-number">10</div>
+                            <h3 class="item-name">MUTTON KEEMA BIRYANI</h3>
+                            <p class="item-description">Minced mutton biryani cooked with special spices and basmati rice.</p>
+                        </div>
+                        <div class="menu-item special-item">
+                            <div class="item-number">11</div>
+                            <h3 class="item-name">MUTTON LUCKNOWI BIRYANI</h3>
+                            <p class="item-description">Authentic Awadhi style mutton dum biryani with delicate spices.</p>
+                        </div>
+                    </div>
+                    <div class="back-button" onclick="hideCategory()">
+                        <i class="fas fa-arrow-left"></i> Back to Categories
+                    </div>
+                </div>
+
+                <!-- Sweets & Desserts Category -->
+                <div class="items-display" id="sweets-items">
+                    <div class="items-header">
+                        <h2 class="items-title">SWEETS & DESSERTS</h2>
+                        <div class="items-count">9 Delicious Treats</div>
+                    </div>
+                    <div class="items-grid">
+                        <div class="menu-item">
+                            <div class="item-number">01</div>
+                            <h3 class="item-name">SHAHI TUKDA</h3>
+                            <p class="item-description">Fried bread in saffron syrup with rabri, nuts & silver leaf.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">02</div>
+                            <h3 class="item-name">PINEAPPLE HALWA</h3>
+                            <p class="item-description">Fresh pineapple cooked with semolina, milk & nuts.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">03</div>
+                            <h3 class="item-name">TIRANGA HALWA</h3>
+                            <p class="item-description">Three-layer halwa: saffron, milk & pistachio.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">04</div>
+                            <h3 class="item-name">SPECIAL ZARDA</h3>
+                            <p class="item-description">Premium sweet rice with saffron, dry fruits & rose water.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">05</div>
+                            <h3 class="item-name">NORMAL ZARDA</h3>
+                            <p class="item-description">Traditional sweet rice with sugar, ghee & cardamom.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">06</div>
+                            <h3 class="item-name">SUJI HALWA</h3>
+                            <p class="item-description">Semolina pudding with ghee, sugar syrup & nuts.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">07</div>
+                            <h3 class="item-name">GAJJAR HALWA</h3>
+                            <p class="item-description">Carrot pudding slow-cooked with milk & khoya.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">08</div>
+                            <h3 class="item-name">KADDU HALWA</h3>
+                            <p class="item-description">Pumpkin pudding with ghee, jaggery & cardamom.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-number">09</div>
+                            <h3 class="item-name">ICE CREAM</h3>
+                            <p class="item-description">Vanilla, Chocolate, Strawberry, Mango.</p>
+                        </div>
+                    </div>
+                    <div class="back-button" onclick="hideCategory()">
+                        <i class="fas fa-arrow-left"></i> Back to Categories
+                    </div>
                 </div>
             </div>
 
-            <!-- Mutton Biryani Category -->
-            <div class="items-display" id="mutton-biryani-items">
-                <div class="items-header">
-                    <h2 class="items-title">MUTTON BIRYANI COLLECTION</h2>
-                    <div class="items-count">11 Royal Varieties</div>
-                </div>
-                <div class="items-grid">
-                    <div class="menu-item">
-                        <div class="item-number">01</div>
-                        <h3 class="item-name">MUTTON BIRYANI</h3>
-                        <p class="item-description">Traditional aromatic basmati rice with tender mutton pieces.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">02</div>
-                        <h3 class="item-name">MUTTON DUM BIRYANI</h3>
-                        <p class="item-description">Slow-cooked dum style mutton biryani with saffron.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">03</div>
-                        <h3 class="item-name">MUTTON TIKKA BIRYANI</h3>
-                        <p class="item-description">Tandoori mutton tikka pieces with fragrant basmati rice.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">04</div>
-                        <h3 class="item-name">MUTTON TANDOORI BIRYANI</h3>
-                        <p class="item-description">Smoky tandoori mutton with traditional biryani rice.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">05</div>
-                        <h3 class="item-name">MUTTON WHITE BIRYANI</h3>
-                        <p class="item-description">Mild white biryani with tender mutton and delicate spices.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">06</div>
-                        <h3 class="item-name">MUTTON GREEN BIRYANI</h3>
-                        <p class="item-description">Herb-infused green biryani with mint and coriander.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">07</div>
-                        <h3 class="item-name">MUTTON AFGHANI BIRYANI</h3>
-                        <p class="item-description">Creamy Afghani style mutton biryani with dry fruits.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">08</div>
-                        <h3 class="item-name">MUTTON LUCKNOWI BIRYANI</h3>
-                        <p class="item-description">Awadhi style dum biryani with delicate spices and saffron.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">09</div>
-                        <h3 class="item-name">MUTTON HYDERABADI BIRYANI</h3>
-                        <p class="item-description">Spicy Hyderabadi style mutton biryani with authentic masalas.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">10</div>
-                        <h3 class="item-name">MUTTON SEEKH BIRYANI</h3>
-                        <p class="item-description">Mutton seekh kebab biryani with charcoal flavor.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">11</div>
-                        <h3 class="item-name">MUTTON KEEMA BIRYANI</h3>
-                        <p class="item-description">Minced mutton biryani with special spice blend.</p>
-                    </div>
-                </div>
-                <div class="back-button" onclick="hideCategory()">
-                    <i class="fas fa-arrow-left"></i> Back to Categories
-                </div>
-            </div>
-
-            <!-- Chicken Biryani Category -->
-            <div class="items-display" id="chicken-biryani-items">
-                <div class="items-header">
-                    <h2 class="items-title">CHICKEN BIRYANI COLLECTION <i class="fas fa-drumstick chicken-biryani-icon"></i></h2>
-                    <div class="items-count">11 Premium Options</div>
-                </div>
-                <div class="items-grid">
-                    <div class="menu-item">
-                        <div class="item-number">01</div>
-                        <h3 class="item-name">CHICKEN BIRYANI</h3>
-                        <p class="item-description">Traditional aromatic basmati rice with succulent chicken pieces.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">02</div>
-                        <h3 class="item-name">CHICKEN DUM BIRYANI</h3>
-                        <p class="item-description">Slow-cooked chicken biryani in traditional dum style.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">03</div>
-                        <h3 class="item-name">CHICKEN TIKKA BIRYANI</h3>
-                        <p class="item-description">Tandoori chicken tikka pieces layered with fragrant rice.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">04</div>
-                        <h3 class="item-name">CHICKEN WHITE BIRYANI</h3>
-                        <p class="item-description">Mild white biryani with chicken and aromatic spices.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">05</div>
-                        <h3 class="item-name">CHICKEN AFGHANI BIRYANI</h3>
-                        <p class="item-description">Creamy, rich biryani with Afghan-inspired spices.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">06</div>
-                        <h3 class="item-name">CHICKEN TANDOORI BIRYANI</h3>
-                        <p class="item-description">Smoky tandoori chicken with traditional biryani rice.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">07</div>
-                        <h3 class="item-name">CHICKEN GREEN BIRYANI</h3>
-                        <p class="item-description">Herb-infused green biryani with mint and spices.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">08</div>
-                        <h3 class="item-name">CHICKEN SHAHIWAN BIRYANI</h3>
-                        <p class="item-description">Special Shahiwani style chicken biryani with rich flavors.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">09</div>
-                        <h3 class="item-name">CHICKEN LUCKNOWI BIRYANI</h3>
-                        <p class="item-description">Awadhi style chicken dum biryani with delicate spices.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">10</div>
-                        <h3 class="item-name">CHICKEN HYDERABADI BIRYANI</h3>
-                        <p class="item-description">Spicy traditional Hyderabadi chicken biryani.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">11</div>
-                        <h3 class="item-name">CHICKEN SEEKH BIRYANI</h3>
-                        <p class="item-description">Chicken seekh kebab biryani with charcoal aroma.</p>
-                    </div>
-                </div>
-                <div class="back-button" onclick="hideCategory()">
-                    <i class="fas fa-arrow-left"></i> Back to Categories
-                </div>
-            </div>
-
-            <!-- Chicken Pulao Category -->
-            <div class="items-display" id="chicken-pulao-items">
-                <div class="items-header">
-                    <h2 class="items-title">CHICKEN PULAO COLLECTION</h2>
-                    <div class="items-count">6 Special Varieties</div>
-                </div>
-                <div class="items-grid">
-                    <div class="menu-item">
-                        <div class="item-number">01</div>
-                        <h3 class="item-name">CHICKEN PULAO</h3>
-                        <p class="item-description">Traditional chicken pulao with aromatic spices and basmati rice.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">02</div>
-                        <h3 class="item-name">CHICKEN WHITE PULAO</h3>
-                        <p class="item-description">Mild white pulao with chicken, nuts, and delicate spices.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">03</div>
-                        <h3 class="item-name">CHICKEN AFGHANI PULAO</h3>
-                        <p class="item-description">Creamy Afghani style chicken pulao with dry fruits.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">04</div>
-                        <h3 class="item-name">CHICKEN JEERA PULAO</h3>
-                        <p class="item-description">Cumin flavored chicken pulao with aromatic rice.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">05</div>
-                        <h3 class="item-name">CHICKEN LUCKNOWI PULAO</h3>
-                        <p class="item-description">Awadhi style chicken pulao with delicate spices.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">06</div>
-                        <h3 class="item-name">ZAMZAM PULAO</h3>
-                        <p class="item-description">Special royal pulao with exotic spices and premium ingredients.</p>
-                    </div>
-                </div>
-                <div class="back-button" onclick="hideCategory()">
-                    <i class="fas fa-arrow-left"></i> Back to Categories
-                </div>
-            </div>
-
-            <!-- Special Dishes Category -->
-            <div class="items-display" id="special-items">
-                <div class="items-header">
-                    <h2 class="items-title">SPECIALTY DISHES</h2>
-                    <div class="items-count">12 Exclusive Creations</div>
-                </div>
-                <div class="items-grid">
-                    <div class="menu-item special-item">
-                        <div class="item-number">01</div>
-                        <h3 class="item-name">MUTTON JAFFRANI</h3>
-                        <p class="item-description">Rich mutton curry with saffron-infused gravy and premium spices.</p>
-                    </div>
-                    <div class="menu-item special-item">
-                        <div class="item-number">02</div>
-                        <h3 class="item-name">MUTTON AKHANI</h3>
-                        <p class="item-description">Special Awadhi style mutton preparation with unique spice blend.</p>
-                    </div>
-                    <div class="menu-item special-item">
-                        <div class="item-number">03</div>
-                        <h3 class="item-name">MUTTON BHUNA</h3>
-                        <p class="item-description">Dry mutton preparation cooked on slow fire with traditional bhuna technique.</p>
-                    </div>
-                    <div class="menu-item special-item">
-                        <div class="item-number">04</div>
-                        <h3 class="item-name">MUTTON BADAMI</h3>
-                        <p class="item-description">Creamy almond-based mutton curry with rich gravy.</p>
-                    </div>
-                    <div class="menu-item special-item">
-                        <div class="item-number">05</div>
-                        <h3 class="item-name">CHICKEN TIKKA MASALA</h3>
-                        <p class="item-description">Tandoori chicken tikka in rich, creamy tomato-based gravy.</p>
-                    </div>
-                    <div class="menu-item special-item">
-                        <div class="item-number">06</div>
-                        <h3 class="item-name">CHICKEN BHUNA</h3>
-                        <p class="item-description">Dry chicken preparation cooked with traditional bhuna spices.</p>
-                    </div>
-                    <div class="menu-item special-item">
-                        <div class="item-number">07</div>
-                        <h3 class="item-name">SEEKH BIRYANI</h3>
-                        <p class="item-description">Fragrant biryani layered with juicy seekh kebabs and basmati rice.</p>
-                    </div>
-                    <div class="menu-item special-item">
-                        <div class="item-number">08</div>
-                        <h3 class="item-name">MALAI TIKKA BIRYANI</h3>
-                        <p class="item-description">Creamy malai tikka chicken with mild spices and saffron rice.</p>
-                    </div>
-                    <div class="menu-item special-item">
-                        <div class="item-number">09</div>
-                        <h3 class="item-name">ZAMZAM BIRYANI</h3>
-                        <p class="item-description">Special royal biryani with premium ingredients and exotic spices.</p>
-                    </div>
-                    <div class="menu-item special-item">
-                        <div class="item-number">10</div>
-                        <h3 class="item-name">MUTTON KEEMA BIRYANI</h3>
-                        <p class="item-description">Minced mutton biryani cooked with special spices and basmati rice.</p>
-                    </div>
-                    <div class="menu-item special-item">
-                        <div class="item-number">11</div>
-                        <h3 class="item-name">MUTTON LUCKNOWI BIRYANI</h3>
-                        <p class="item-description">Authentic Awadhi style mutton dum biryani with delicate spices.</p>
-                    </div>
-                </div>
-                <div class="back-button" onclick="hideCategory()">
-                    <i class="fas fa-arrow-left"></i> Back to Categories
-                </div>
-            </div>
-
-            <!-- Sweets & Desserts Category -->
-            <div class="items-display" id="sweets-items">
-                <div class="items-header">
-                    <h2 class="items-title">SWEETS & DESSERTS</h2>
-                    <div class="items-count">4 Delicious Treats</div>
-                </div>
-                <div class="items-grid">
-                    <div class="menu-item">
-                        <div class="item-number">01</div>
-                        <h3 class="item-name">SUJI HALWA</h3>
-                        <p class="item-description">Traditional semolina pudding cooked with ghee, sugar, and dry fruits.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">02</div>
-                        <h3 class="item-name">SHAHI TUKDA</h3>
-                        <p class="item-description">Fried bread in saffron syrup with rabri, nuts & silver leaf..</p>
-                    </div>
-		     <div class="menu-item">
-                        <div class="item-number">03</div>
-                        <h3 class="item-name">TIRANGA HALWA</h3>
-                        <p class="item-description">Three-layer halwa: saffron, milk & pistachio.</p>
-                    </div>
-		     <div class="menu-item">
-                        <div class="item-number">04</div>
-                        <h3 class="item-name">PINEAPPLE KA HALWA</h3>
-                        <p class="item-description">Fresh pineapple cooked with semolina, milk & nuts.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">05</div>
-                        <h3 class="item-name">GAJJAR KA HALWA</h3>
-                        <p class="item-description">Rich carrot pudding cooked with milk, ghee, and dry fruits.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-number">06</div>
-                        <h3 class="item-name">KADDU KA HALWA</h3>
-                        <p class="item-description">Traditional pumpkin pudding with nuts and aromatic spices.</p>
-                    </div>
-		    <div class="menu-item">
-                        <div class="item-number">07</div>
-                        <h3 class="item-name">NORMAL ZARDA</h3>
-                        <p class="item-description">Traditional sweet rice with sugar, ghee & cardamom.</p>
-                    </div>
-		    <div class="menu-item">
-                        <div class="item-number">08</div>
-                        <h3 class="item-name">SPECIAL ZARDA</h3>
-                        <p class="item-description">Premium sweet rice with saffron, dry fruits & rose water.</p>
+            <!-- Footer -->
+            <div class="menu-footer" id="menu-footer">
+                <div class="footer-content">
+                    <div class="contact-info">
+                        <h3><i class="fas fa-crown"></i> CONTACT US</h3>
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Shriwardhan, Maharashtra, India</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+919356423277" class="phone-link">+91 93564 23277</a>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <span>zaheer@caterers.com</span>
+                        </div>
                     </div>
 
-                </div>
-                <div class="back-button" onclick="hideCategory()">
-                    <i class="fas fa-arrow-left"></i> Back to Categories
+                    <div class="hours">
+                        <h3><i class="fas fa-clock"></i> WORKING HOURS</h3>
+                        <p>Monday - Sunday</p>
+                        <p>08:00 AM - 10:00 PM</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Footer -->
-        <div class="menu-footer" id="menu-footer">
-            <div class="footer-content">
-                <div class="contact-info">
-                    <h3><i class="fas fa-crown"></i> CONTACT US</h3>
-                    <div class="contact-detail">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Shriwardhan, Maharashtra, India</span>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fas fa-phone-alt"></i>
-                        <a href="tel:+919356423277" class="phone-link">+91 93564 23277</a>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fas fa-envelope"></i>
-                        <span>zaheer@caterers.com</span>
-                    </div>
-                </div>
-
-                <div class="hours">
-                    <h3><i class="fas fa-clock"></i> WORKING HOURS</h3>
-                    <p>Monday - Sunday</p>
-                    <p>08:00 AM - 10:00 PM</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Create golden particles
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 12;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('gold-particle');
+        <script>
+            // Create golden particles
+            function createParticles() {
+                const particlesContainer = document.getElementById('particles');
+                const particleCount = 12;
                 
-                // Random properties
-                const size = Math.random() * 80 + 40;
-                const posX = Math.random() * 100;
-                const posY = Math.random() * 100;
-                const duration = Math.random() * 20 + 20;
-                const delay = Math.random() * 5;
-                
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                particle.style.left = `${posX}%`;
-                particle.style.top = `${posY}%`;
-                particle.style.animation = `floatParticle ${duration}s linear ${delay}s infinite`;
-                
-                particlesContainer.appendChild(particle);
-            }
-        }
-
-        // Floating animation for particles
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes floatParticle {
-                0%, 100% {
-                    transform: translate(0, 0) rotate(0deg);
-                    opacity: 0;
-                }
-                10% {
-                    opacity: 0.3;
-                }
-                90% {
-                    opacity: 0.3;
-                }
-                50% {
-                    transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) rotate(180deg);
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.classList.add('gold-particle');
+                    
+                    // Random properties
+                    const size = Math.random() * 80 + 40;
+                    const posX = Math.random() * 100;
+                    const posY = Math.random() * 100;
+                    const duration = Math.random() * 20 + 20;
+                    const delay = Math.random() * 5;
+                    
+                    particle.style.width = `${size}px`;
+                    particle.style.height = `${size}px`;
+                    particle.style.left = `${posX}%`;
+                    particle.style.top = `${posY}%`;
+                    particle.style.animation = `floatParticle ${duration}s linear ${delay}s infinite`;
+                    
+                    particlesContainer.appendChild(particle);
                 }
             }
-        `;
-        document.head.appendChild(style);
 
-        // Category Management
-        let currentCategory = null;
-
-        function showCategory(category) {
-            // Remove active class from all category cards
-            document.querySelectorAll('.category-card').forEach(card => {
-                card.classList.remove('active');
-            });
-
-            // Add active class to clicked category
-            event.currentTarget.classList.add('active');
-
-            // Hide category navigation and footer
-            document.querySelector('.category-nav').style.display = 'none';
-            document.getElementById('menu-footer').style.display = 'none';
-
-            // Show menu content area
-            document.getElementById('menu-content').style.display = 'block';
-
-            // Hide all item displays
-            document.querySelectorAll('.items-display').forEach(display => {
-                display.classList.remove('active');
-            });
-
-            // Show selected category items
-            document.getElementById(category + '-items').classList.add('active');
-            currentCategory = category;
-
-            // Smooth scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function hideCategory() {
-            // Show category navigation and footer
-            document.querySelector('.category-nav').style.display = 'grid';
-            document.getElementById('menu-footer').style.display = 'block';
-
-            // Hide menu content area
-            document.getElementById('menu-content').style.display = 'none';
-
-            // Remove active class from all category cards
-            document.querySelectorAll('.category-card').forEach(card => {
-                card.classList.remove('active');
-            });
-
-            currentCategory = null;
-
-            // Smooth scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Initialize particles
-        document.addEventListener('DOMContentLoaded', function() {
-            createParticles();
-            
-            // Add hover effects to menu items
-            document.querySelectorAll('.menu-item').forEach(item => {
-                item.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-8px)';
-                    this.style.borderColor = 'rgba(212, 175, 55, 0.4)';
-                });
-                
-                item.addEventListener('mouseleave', function() {
-                    if (!this.classList.contains('special-item')) {
-                        this.style.transform = 'translateY(0)';
-                        this.style.borderColor = 'rgba(212, 175, 55, 0.1)';
+            // Floating animation for particles
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes floatParticle {
+                    0%, 100% {
+                        transform: translate(0, 0) rotate(0deg);
+                        opacity: 0;
                     }
+                    10% {
+                        opacity: 0.3;
+                    }
+                    90% {
+                        opacity: 0.3;
+                    }
+                    50% {
+                        transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) rotate(180deg);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+
+            // Category Management
+            let currentCategory = null;
+
+            function showCategory(category) {
+                // Remove active class from all category cards
+                document.querySelectorAll('.category-card').forEach(card => {
+                    card.classList.remove('active');
+                });
+
+                // Add active class to clicked category
+                event.currentTarget.classList.add('active');
+
+                // Hide category navigation and footer
+                document.querySelector('.category-nav').style.display = 'none';
+                document.getElementById('menu-footer').style.display = 'none';
+
+                // Show menu content area
+                document.getElementById('menu-content').style.display = 'block';
+
+                // Hide all item displays
+                document.querySelectorAll('.items-display').forEach(display => {
+                    display.classList.remove('active');
+                });
+
+                // Show selected category items
+                document.getElementById(category + '-items').classList.add('active');
+                currentCategory = category;
+
+                // Smooth scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            function hideCategory() {
+                // Show category navigation and footer
+                document.querySelector('.category-nav').style.display = 'grid';
+                document.getElementById('menu-footer').style.display = 'block';
+
+                // Hide menu content area
+                document.getElementById('menu-content').style.display = 'none';
+
+                // Remove active class from all category cards
+                document.querySelectorAll('.category-card').forEach(card => {
+                    card.classList.remove('active');
+                });
+
+                currentCategory = null;
+
+                // Smooth scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            // Initialize particles
+            document.addEventListener('DOMContentLoaded', function() {
+                createParticles();
+                
+                // Add hover effects to menu items
+                document.querySelectorAll('.menu-item').forEach(item => {
+                    item.addEventListener('mouseenter', function() {
+                        this.style.transform = 'translateY(-8px)';
+                        this.style.borderColor = 'rgba(212, 175, 55, 0.4)';
+                    });
+                    
+                    item.addEventListener('mouseleave', function() {
+                        if (!this.classList.contains('special-item')) {
+                            this.style.transform = 'translateY(0)';
+                            this.style.borderColor = 'rgba(212, 175, 55, 0.1)';
+                        }
+                    });
                 });
             });
-        });
 
-        // Keyboard navigation support
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape' && currentCategory) {
-                hideCategory();
-            }
-        });
-
-        // Make phone number clickable for calling
-        function makeCall() {
-            window.open('tel:+919356423277');
-        }
-    </script>
-</body>
-</html>
+            // Keyboard navigation support
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape' && currentCategory) {
+                    hideCategory();
+                }
+            });
+        </script>
+    </body>
+    </html>
